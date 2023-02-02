@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple quiz to practice knowledge." />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="dropbtn">Credits</button>
+      <div class="dropdown-content">
+        <a href="https://github.com/bradtraversy">Brad</a>
+        <a href="https://github.com/YilianSource/party-js">Party-js</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <div class="quiz-nav">
+            <div id="quiz-info"></div>
+            <button type="button" class="reset-button" id="reset">
+              <svg
+              class="reset-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 10H6.78A11 11 0 0 1 27 16h2A13 13 0 0 0 6 7.68V4H4v8h8zm8 12h5.22A11 11 0 0 1 5 16H3a13 13 0 0 0 23 8.32V28h2v-8h-8z"
+                />
+              </svg>
+            </button>
+          </div>
+          <h2 id="question">Question text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer" />
+              <label for="a" id="a_text">Question</label>
+            </li>
+
+            <li>
+              <input type="radio" name="answer" id="b" class="answer" />
+              <label for="b" id="b_text">Question</label>
+            </li>
+
+            <li>
+              <input type="radio" name="answer" id="c" class="answer" />
+              <label for="c" id="c_text">Question</label>
+            </li>
+
+            <li>
+              <input type="radio" name="answer" id="d" class="answer" />
+              <label for="d" id="d_text">Question</label>
+            </li>
+          </ul>
+        </div>
+        <div class="countdown-container">
+          <div class="countdwon-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M9 7H11V12H16V14H9V7Z" fill="currentColor" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div id="countdown"></div>
+        </div>
+        <button type="button" class="button" id="submit">Следващ</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
